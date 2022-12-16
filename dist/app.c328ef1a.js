@@ -132,6 +132,13 @@ upBtn.addEventListener('click', function () {
 downBtn.addEventListener('click', function () {
   changesSlide('down');
 });
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'ArrowUp') {
+    changesSlide('up');
+  } else if (event.key === 'ArrowDown') {
+    changesSlide('down');
+  }
+});
 function changesSlide(direction) {
   if (direction === 'up') {
     activeSlideIndex++;
@@ -173,7 +180,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63816" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49931" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
